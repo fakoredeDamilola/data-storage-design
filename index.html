@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .body {
+        background-image: url("bg-mobile.svg");
+        background-repeat: no-repeat;
+        width: 375px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 130px 0;
+        font-size: 14px;
+
+        color: hsl(243, 100%, 93%);
+        font-family: "Raleway", sans-serif;
+      }
+      .wrapper {
+        background: red;
+        width: 90%;
+      }
+      .top {
+        background: hsl(228, 56%, 26%);
+        width: 80%;
+
+        box-sizing: border-box;
+        border-radius: 5px 100px 5px 5px;
+        margin: 10px 0;
+        padding: 40px;
+      }
+      .top-inner-bottom {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 170px;
+      }
+      .icon-box {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        background-color: hsl(229, 57%, 11%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .icon {
+        width: 22px;
+      }
+      .bottom {
+        background: hsl(228, 56%, 26%);
+        width: 80%;
+
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 40px 0;
+        padding-left: 30px;
+        padding-right: 20px;
+        text-align: center;
+      }
+      .last {
+        width: 50%;
+        height: 60px;
+        border-radius: 8px;
+        background-color: white;
+        margin-top: -42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: hsl(229, 7%, 55%);
+      }
+      .text-1 {
+        font-size: 35px;
+        font-family: "Raleway", sans-serif;
+        margin: 0 10px;
+
+        color: hsl(229, 57%, 11%);
+        font-weight: bold;
+      }
+      .word span {
+        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+      }
+      .range {
+        margin-top: 15px;
+        width: 100%;
+        height: 16px;
+        background-color: hsl(229, 57%, 11%);
+        border-radius: 20px;
+        padding: 2px;
+        box-sizing: border-box;
+      }
+      .sub-range {
+        width: 70%;
+        height: 12px;
+        background-image: linear-gradient(
+          to right,
+          hsl(6, 100%, 80%),
+          hsl(335, 100%, 65%)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        position: relative;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        left: calc(100% - 12px);
+      }
+      .range-value {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        color: hsl(243, 100%, 93%);
+      }
+      @media (min-width: 1140px) {
+        body {
+          display: block;
+        }
+        .body {
+          background: url("bg-desktop.svg") hsl(229, 57%, 11%);
+          background-repeat: no-repeat;
+          background-size: 100% 50%;
+          background-position: bottom;
+          width: 100%;
+          height: 97vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          padding: 0;
+          font-size: 14px;
+
+          color: hsl(243, 100%, 93%);
+          font-family: "Raleway", sans-serif;
+        }
+        .top {
+          width: 300px;
+          margin: 0;
+        }
+        .bottom {
+          width: 500px;
+          margin-top: 50px;
+          text-align: left;
+          margin-left: 30px;
+        }
+        .last {
+          width: 150px;
+          height: 90px;
+          display: block;
+          padding-top: 13px;
+          border-radius: 8px 8px 0 8px;
+          box-sizing: border-box;
+          margin-top: -110px;
+          margin-left: -175px;
+          clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 75%,
+            100% 75%,
+            100% 100%,
+            82% 75%,
+            0% 75%
+          );
+        }
+        .text-1 {
+          margin: 0;
+          margin-left: 15px;
+          margin-right: 5px;
+        }
+        .text {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- You’ve used 815 GB of your storage
+
+  185 GB Left
+  
+  0 GB
+  1000 GB -->
+    <div class="body">
+      <div class="top">
+        <div class="top-inner-top">
+          <img src="logo.svg" alt="logo" class="bg-img" />
+        </div>
+        <div class="top-inner-bottom">
+          <div class="icon-box">
+            <img src="icon-document.svg" alt="icon" class="icon" />
+          </div>
+          <div class="icon-box">
+            <img src="icon-folder.svg" alt="icon" class="icon" />
+          </div>
+          <div class="icon-box">
+            <img src="icon-upload.svg" alt="icon" class="icon" />
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="word">You've used <span>815 GB</span> of your storage</div>
+        <div class="range">
+          <div class="sub-range"><div class="dot"></div></div>
+        </div>
+        <div class="range-value">
+          <div>0 GB</div>
+          <div>1000 GB</div>
+        </div>
+      </div>
+      <div class="last">
+        <span class="text-1">185</span> <span class="text">GB LEFT</span>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Fakorede Damilola</a>.
+    </div>
+  </body>
+</html>
